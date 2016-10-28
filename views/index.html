@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include 'head.html' %}
+  <body ng-app="SetGame">
+    {% include 'partials/navbar.html' %}
+    <div class="container board" ng-controller="MainController as main">
+      {% include 'menu.html' %}
+      <div class="ng-cloak" ng-show="main.started">
+      <h1><% main.message %></h1>
+      <h2><% main.yourScore %></h2>
+      <h2><% main.opponentScore %></h2>
+      <div id="board" class="col-xs-12">
+        <div class="card-slot col-xs-4 col-md-3"
+         ng-repeat="card in main.board" ng-click="main.touch(card)"
+        ng-class="{on: main.selected.indexOf(card) != -1}">
+          <span class="stretchy no-limit">
+            <img class="spacer" src="/public/img/spacer.png">
+            <img class="sprite <% main.getClasses(card) %>" ng-src="public/img/<% card.substr(0,2) %>.png">
+          </span>
+        </div>
+      </div>
+      <div>
+        <% main.selected %>
+      </div>
+      <button ng-click="main.startGame()">Guess</button>
+    </div>
+  </div>
+    <script src="public/lib/jquery.min.js"></script>
+    <script src="public/lib/bootstrap.min.js"></script>
+    <script src="public/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* to make stretchyness work */
+
+.stretchy {
+  display:block;
+  float:left;
+  position:relative;
+  overflow:hidden;
+  max-width:180px;
+}
+
+.stretchy .spacer {
+  width: 100%;
+  height: auto;
+}
+
+.stretchy.no-limit {
+  max-width: none;
+}
+
+/*.stretchy.no-limit .sprite {
+  min-height: 100%;
+}*/
+
+.stretchy.no-limit img {
+  border:0;
+  padding: 0;
+  margin: 0 ;
+  display: block;
+}
+
+.stretchy .sprite {
+position:absolute;
+top:0;
+left:0;
+max-width:none;
+max-height:100%;
+}
+
+.one.empty {
+  left:0%;
+}
+
+.one.striped {
+  left:-100%
+}
+
+.one.solid {
+  left: -200%
+}
+
+.two.empty {
+  left:-300%
+}
+.two.striped {
+  left:-400%
+}
+.two.solid {
+  left:-500%
+}
+
+.three.empty {
+  left:-600%;
+}
+
+.three.striped {
+  left:-700%;
+}
+.three.solid {
+  left:-800%;
+}

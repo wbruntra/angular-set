@@ -1,0 +1,16 @@
+{
+  "name": "angular-set",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build-css": "stylus source/css/style.styl -o public/css",
+    "watch-css": "stylus source/css/style.styl -o public/css -w",
+    "clean": "rm -rf public/css && mkdir -p public/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+    "start": "npm run build-css && dev_appserver.py ."
+  },
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
+}

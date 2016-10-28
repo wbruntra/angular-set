@@ -1,0 +1,36 @@
+<div class="menu" ng-hide="main.started">
+  <div class="row">
+          <p>Choose a difficulty level</p>
+        </div>
+        <div class="row">
+          <div class="col-xs-2">Easy
+          </div>
+          <div class="col-xs-8">
+            <input id="difficulty" type="range" min="1" max="6" value="2">
+          </div>
+          <div class="col-xs-2">Hard</div>
+        </div>
+        <div class="row">
+          <p>First to get 5 points is the winner!</p>
+        </div>
+        <div class="row">
+          <button ng-click="main.started = true">Start the Game</button>
+        </div>
+        <div class="row">
+        <p>scoring: you get one point for every set, lose half a point for a false call</p>
+      </div>
+      <div class="row">
+        <p>
+          <strong>keyboard tips</strong>
+        </p>
+      </div>
+      <div class="row">
+        <p>hit 's' to call out your set, 'g' to lock in your choice<br>'r' reshuffles the deck</p>
+      </div>
+      <div class="row">
+        <p>
+          <a class="button" href="/rules">How to Play</a>
+          <a class="button" href="/scores">See High Scores</a>
+        </p>
+      </div>
+    </div>
